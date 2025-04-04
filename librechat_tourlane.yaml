@@ -277,7 +277,10 @@ fileConfig:
       totalSizeLimit: 50  # Maximum total size for all files in a single request in MB
       supportedMimeTypes:
         - "image/.*"
-        - "application/pdf"
+        - "application/pdf" 
+        - "application/vnd.ms-excel"  # ✅ Support for .xls (old Excel format)
+        - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # ✅ Support for .xlsx (newer Excel format)
+        - "text/csv"  # ✅ Support for CSV files
     openAI:
       disabled: true  # Disables file uploading to the OpenAI endpoint
     default:
