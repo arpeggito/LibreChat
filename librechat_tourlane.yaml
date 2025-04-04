@@ -278,9 +278,7 @@ fileConfig:
       supportedMimeTypes:
         - "image/.*"
         - "application/pdf" 
-        - "application/vnd.ms-excel"  # ✅ Support for .xls (old Excel format)
-        - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # ✅ Support for .xlsx (newer Excel format)
-        - "text/csv"  # ✅ Support for CSV files
+        - "application/.*"
     openAI:
       disabled: false  # Disables file uploading to the OpenAI endpoint
     default:
