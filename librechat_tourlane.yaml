@@ -282,7 +282,7 @@ fileConfig:
         - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # ✅ Support for .xlsx (newer Excel format)
         - "text/csv"  # ✅ Support for CSV files
     openAI:
-      disabled: true  # Disables file uploading to the OpenAI endpoint
+      disabled: false  # Disables file uploading to the OpenAI endpoint
     default:
       totalSizeLimit: 20
     YourCustomEndpointName:
