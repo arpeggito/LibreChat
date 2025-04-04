@@ -73,7 +73,7 @@ interface:
 
 # Example Registration Object Structure (optional)
 registration:
-  socialLogins: ['openid']
+  socialLogins: 'openid'
   # allowedDomains:
   # - "gmail.com"
 
@@ -102,17 +102,17 @@ balance:
 #       apiKey: '${STT_API_KEY}'
 #       model: ''
 
-# rateLimits:
-#   fileUploads:
-#     ipMax: 100
-#     ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
-#     userMax: 50
-#     userWindowInMinutes: 60  # Rate limit window for file uploads per user
-#   conversationsImport:
-#     ipMax: 100
-#     ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
-#     userMax: 50
-#     userWindowInMinutes: 60  # Rate limit window for conversation imports per user
+rateLimits:
+  fileUploads:
+    ipMax: 100
+    ipWindowInMinutes: 60  # Rate limit window for file uploads per IP
+    userMax: 50
+    userWindowInMinutes: 60  # Rate limit window for file uploads per user
+  conversationsImport:
+    ipMax: 100
+    ipWindowInMinutes: 60  # Rate limit window for conversation imports per IP
+    userMax: 50
+    userWindowInMinutes: 60  # Rate limit window for conversation imports per user
 
 # Example Actions Object Structure
 actions:
@@ -150,7 +150,7 @@ actions:
 #       - /path/to/obsidian/vault
 
 # Definition of custom endpoints
-# endpoints:
+endpoints:
   # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
@@ -173,8 +173,8 @@ actions:
   #   disableBuilder: false
   #   # (optional) Agent Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
   #   capabilities: ["execute_code", "file_search", "actions", "tools"]
-  # custom: []
-    # Groq Example
+  custom:
+    # # Groq Example
     # - name: 'groq'
     #   apiKey: '${GROQ_API_KEY}'
     #   baseURL: 'https://api.groq.com/openai/v1/'
@@ -278,11 +278,8 @@ fileConfig:
       supportedMimeTypes:
         - "image/.*"
         - "application/pdf"
-        - "application/vnd.ms-excel"  # ✅ Support for .xls (old Excel format)
-        - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  # ✅ Support for .xlsx (newer Excel format)
-        - "text/csv"  # ✅ Support for CSV files
     openAI:
-      disabled: false  # Disables file uploading to the OpenAI endpoint
+      disabled: true  # Disables file uploading to the OpenAI endpoint
     default:
       totalSizeLimit: 20
     YourCustomEndpointName:
