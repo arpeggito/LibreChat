@@ -151,17 +151,7 @@ actions:
 
 # Definition of custom endpoints
 endpoints:
-  openai:
-    titleModel: "o3-mini"
-    modelSelect: true
-    parameters: true
-    presets: true
-    plugins: true
-    assistants: true
-    models:
-      o3-mini:
-        temperature: 1  # Required for o3-mini
-        dropParams: ["stream", "temperature", "top_p", "presence_penalty", "frequency_penalty", "best_of", "max_tokens", "stop"]  # assistants:
+ # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
   #   timeoutMs: 180000  # Timeout for assistant operations
