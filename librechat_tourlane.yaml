@@ -284,8 +284,8 @@ fileConfig:
     default:
       totalSizeLimit: 20
     YourCustomEndpointName:
-      fileLimit: 2
-      fileSizeLimit: 5
+      fileLimit: 5
+      fileSizeLimit: 15
   serverFileSizeLimit: 100  # Global server file size limit in MB
   avatarSizeLimit: 2  # Limit for user avatar image size in MB
 # # See the Custom Configuration Guide for more information on Assistants Config:
